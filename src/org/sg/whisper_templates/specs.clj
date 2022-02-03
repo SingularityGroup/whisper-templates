@@ -22,7 +22,7 @@
 (s/def
   :org.sg.whisper/template
   (s/keys
-   ::req
+   :req
    [:org.sg.whisper-template/language
     :org.sg.whisper-template/title
     :org.sg.whisper-template/content]))
