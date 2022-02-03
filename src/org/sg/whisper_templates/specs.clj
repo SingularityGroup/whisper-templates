@@ -17,7 +17,11 @@
    (complement str/blank?)
    (comp #(> 80 %) count)))
 
-(s/def :org.sg.whisper-template/language keyword?)
+(s/def
+  :org.sg.whisper-template/language
+  (s/and
+   string?
+   (comp #(> 30 %) count)))
 
 (s/def
   :org.sg.whisper/template
@@ -33,4 +37,8 @@
    #:org.sg.whisper-template
    {:content "fo"
     :title "fa"
-    :language :eng}))
+    :language :lang-eng}
+   #:org.sg.whisper-template
+   {:content "fo"
+    :title "ffffffffffffffffffffff"
+    :language :lang-eng}))
